@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio2</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let inicio = ["unacadena",3,9,1,10,500,1,10,true];
+        //ELIMINAR DATOS NO NUMEROS
+        for(let i=0; i < inicio.length; i++){
+            if(typeof inicio[i]!= 'number'){
+                inicio.splice(i,1);
+            }
+        }
+
+        //ORDENAMIENTO BURUBUJA
+        for(let j=0; j< inicio.length; j++){
+            for(let i=0; i< inicio.length; i++){
+                temp = inicio[i+1];
+                if(inicio[i]>inicio[i+1]){
+                    inicio[i+1] = inicio[i];
+                    inicio[i] = temp;
+                }
+            }
+        }
+        console.log(inicio);
+
+
+        
+
+    </script>
+
+
+</body>
+
+
+
+</html>
